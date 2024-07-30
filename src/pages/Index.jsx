@@ -3,99 +3,101 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Index = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-2">Forth vs HP RPL</h1>
-        <p className="text-xl text-gray-600">A Comparative Analysis</p>
-      </header>
+    <div className="min-h-screen bg-blue-100 text-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">Forth vs HP RPL</h1>
+          <p className="text-xl text-gray-700">A Comparative Analysis</p>
+        </header>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-        <p className="text-gray-700">
-          This page provides a comparative analysis of Forth and HP RPL, two stack-based programming languages. 
-          While they share some similarities, there are key differences in their syntax, features, and use cases.
-        </p>
-      </section>
+        <section className="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
+          <p className="text-gray-700">
+            This page provides a comparative analysis of Forth and HP RPL, two stack-based programming languages. 
+            While they share some similarities, there are key differences in their syntax, features, and use cases.
+          </p>
+        </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Comparison Table</h2>
-        <ScrollArea className="h-[400px] w-full rounded-md border">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[200px]">Aspect</TableHead>
-                <TableHead>Forth</TableHead>
-                <TableHead>HP RPL</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell className="font-medium">Origin</TableCell>
-                <TableCell>Developed by Charles H. Moore in the 1970s</TableCell>
-                <TableCell>Developed by Hewlett-Packard in the 1980s</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Syntax</TableCell>
-                <TableCell>Postfix notation (Reverse Polish Notation)</TableCell>
-                <TableCell>Postfix notation (Reverse Polish Notation)</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Data Types</TableCell>
-                <TableCell>Primarily works with integers and addresses</TableCell>
-                <TableCell>Supports various data types including complex numbers and matrices</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Memory Management</TableCell>
-                <TableCell>Manual memory management</TableCell>
-                <TableCell>Automatic memory management with garbage collection</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Extensibility</TableCell>
-                <TableCell>Highly extensible, allows defining new words</TableCell>
-                <TableCell>Extensible, allows defining new functions and commands</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </ScrollArea>
-      </section>
+        <section className="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4">Comparison Table</h2>
+          <ScrollArea className="h-[400px] w-full rounded-md border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[200px]">Aspect</TableHead>
+                  <TableHead>Forth</TableHead>
+                  <TableHead>HP RPL</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">Origin</TableCell>
+                  <TableCell>Developed by Charles H. Moore in the 1970s</TableCell>
+                  <TableCell>Developed by Hewlett-Packard in the 1980s</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Syntax</TableCell>
+                  <TableCell>Postfix notation (Reverse Polish Notation)</TableCell>
+                  <TableCell>Postfix notation (Reverse Polish Notation)</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Data Types</TableCell>
+                  <TableCell>Primarily works with integers and addresses</TableCell>
+                  <TableCell>Supports various data types including complex numbers and matrices</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Memory Management</TableCell>
+                  <TableCell>Manual memory management</TableCell>
+                  <TableCell>Automatic memory management with garbage collection</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Extensibility</TableCell>
+                  <TableCell>Highly extensible, allows defining new words</TableCell>
+                  <TableCell>Extensible, allows defining new functions and commands</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </ScrollArea>
+        </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Code Examples</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Forth</h3>
-            <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
-              <code>
-                : FACTORIAL ( n -- n! )<br/>
-                &nbsp;&nbsp;DUP 0= IF DROP 1 EXIT THEN<br/>
-                &nbsp;&nbsp;DUP 1- RECURSE *<br/>
-                ;<br/>
-                <br/>
-                5 FACTORIAL .  ( prints 120 )
-              </code>
-            </pre>
+        <section className="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4">Code Examples</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Forth</h3>
+              <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                <code>
+                  : FACTORIAL ( n -- n! )<br/>
+                  &nbsp;&nbsp;DUP 0= IF DROP 1 EXIT THEN<br/>
+                  &nbsp;&nbsp;DUP 1- RECURSE *<br/>
+                  ;<br/>
+                  <br/>
+                  5 FACTORIAL .  ( prints 120 )
+                </code>
+              </pre>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">HP RPL</h3>
+              <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                <code>
+                  &lt;&lt; DUP 0 == <br/>
+                  &nbsp;&nbsp;IF DROP 1<br/>
+                  &nbsp;&nbsp;ELSE DUP 1 - FACTORIAL *<br/>
+                  &nbsp;&nbsp;END<br/>
+                  &gt;&gt;<br/>
+                  'FACTORIAL' STO<br/>
+                  <br/>
+                  5 FACTORIAL  ( returns 120 )
+                </code>
+              </pre>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">HP RPL</h3>
-            <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
-              <code>
-                &lt;&lt; DUP 0 == <br/>
-                &nbsp;&nbsp;IF DROP 1<br/>
-                &nbsp;&nbsp;ELSE DUP 1 - FACTORIAL *<br/>
-                &nbsp;&nbsp;END<br/>
-                &gt;&gt;<br/>
-                'FACTORIAL' STO<br/>
-                <br/>
-                5 FACTORIAL  ( returns 120 )
-              </code>
-            </pre>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="text-center text-gray-500 mt-8">
-        <p>Note: This is a simplified comparison. For more detailed information, please consult official documentation.</p>
-      </footer>
+        <footer className="text-center text-gray-600 mt-8 bg-white bg-opacity-80 p-4 rounded-lg shadow-md">
+          <p>Note: This is a simplified comparison. For more detailed information, please consult official documentation.</p>
+        </footer>
+      </div>
     </div>
   );
 };
