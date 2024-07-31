@@ -12,9 +12,14 @@ const Index = () => {
 
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-          <p className="text-amber-200">
+          <p className="text-amber-200 mb-4">
             This page provides a comparative analysis of Forth and HP RPL, two stack-based programming languages. 
             While they share some similarities, there are key differences in their syntax, features, and use cases.
+          </p>
+          <p className="text-amber-200">
+            Notably, RPL (Reverse Polish Lisp) was the programming language used by the HP48 series of calculators, 
+            which were popular among engineers and scientists in the 1990s and early 2000s. This implementation of RPL 
+            showcased its power in handling complex mathematical operations and its suitability for handheld devices.
           </p>
         </section>
 
@@ -33,7 +38,7 @@ const Index = () => {
                 <TableRow>
                   <TableCell className="font-medium text-amber-200">Origin</TableCell>
                   <TableCell className="text-amber-100">Developed by Charles H. Moore in the 1970s</TableCell>
-                  <TableCell className="text-amber-100">Developed by Hewlett-Packard in the 1980s</TableCell>
+                  <TableCell className="text-amber-100">Developed by Hewlett-Packard in the 1980s, notably used in HP48 calculators</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="font-medium text-amber-200">Syntax</TableCell>
